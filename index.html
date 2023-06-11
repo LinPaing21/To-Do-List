@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <!-- Boostrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        ul li {
+            cursor: pointer;
+            padding: 12px 8px 12px 40px; 
+        }
+        /* Set all odd list items to a different color (zebra-stripes) */
+        ul li:nth-child(odd) {
+        background: #f9f9f9;
+        }
+
+        /* Darker background-color on hover */
+        ul li:hover {
+        background: #ddd;
+        }
+
+        /* When clicked on, add a background color and strike out text */
+        ul li.checked {
+        background: #888;
+        color: #fff;
+        text-decoration: line-through;
+        }
+        
+    </style>
+    <!-- Fontawesome Link -->
+    <script src="https://kit.fontawesome.com/63f4d5d94a.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-body-secondary">
+
+    <main class="container mt-3 p-2">
+        <div class="row">
+            <div class="col-8 col-md-6 mx-auto bg-light rounded pt-2 pb-5">
+                <!-- add section -->
+                <h1 class="fs-1 text-center">To Do List</h1>
+                <p class="text-center d-none d-lg-block">___________________________________ x ___________________________________</p>
+                <div id="alert"></div>
+                <label for="addNote" class="form-label fs-4">Add a list</label>
+                <div class="input-group">
+                    <i class="fa-regular fa-note-sticky input-group-text fs-2"></i>
+                    <input type="text" id="addNote" class="form-control form-control-lg" placeholder="Add a note">
+                    <button class="btn btn-outline-primary" type="button" id="addBtn">Add</button>
+                </div>
+                <!-- add section end -->
+
+                <!-- list section -->
+                <ul id="ulList" class="list-group list-group-flush mt-3">
+                    <li class="list-group-item"><i class="fa-solid fa-check me-2 d-none"></i>An item</li>
+                    <li class="list-group-item"><i class="fa-solid fa-check me-2 d-none"></i>A second item</li>
+                    <li class="list-group-item"><i class="fa-solid fa-check me-2 d-none"></i>A third item</li>
+                    <li class="list-group-item"><i class="fa-solid fa-check me-2 d-none"></i>A fourth item</li>
+                    <li class="list-group-item"><i class="fa-solid fa-check me-2 d-none"></i>And a fifth one</li>
+                </ul>
+
+                <!-- list section end-->
+            </div>
+        </div>
+    </main>
+    
+
+    <!--js file for ToDoList-->
+    <script src="./app.js"></script>
+    <!-- Boostrap link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
